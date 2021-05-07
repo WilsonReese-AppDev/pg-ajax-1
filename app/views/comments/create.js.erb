@@ -1,11 +1,7 @@
-// $("#<%= dom_id(@comment) %>").fadeOut(function() {
-//   $(this).remove();
-// });
-
-// $("#comment_<%= @comment.id %>").show();
-
 $("#<%= dom_id(@comment.photo) %>_new_comment_form")
-  .before("<%= escape_javascript(render(@comment)) %>");
+  .before("<%= escape_javascript(render(@comment)) %>")
+  .hide()
+  .slideDown(250);
 
 $("#<%= dom_id(@comment.photo) %>_new_comment_form #comment_body").val("");
 
