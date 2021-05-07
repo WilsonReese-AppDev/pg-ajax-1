@@ -1,0 +1,8 @@
+$("#comment_<%= @comment.id %>").fadeOut(function() {
+  $(this).remove();
+});
+
+$("#comment_<%= @comment.id %>").fadeOut();
+
+
+console.log("Comment deleted successfully.")
