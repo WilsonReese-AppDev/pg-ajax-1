@@ -1,6 +1,2 @@
-$(console.log("<%= dom_class(current_user)%>_<%= dom_class(@follow_request.recipient) %>_follow_request"));
-
-listOfElements = document.getElementsByClassName(
-  "<%= dom_id(current_user)%>_<%= dom_id(@follow_request.recipient) %>_follow_request");
-
-$(listOfElements).replaceWith("<%= j(render "follow_requests/follow_unfollow", recipient: @follow_request.recipient )%>");
+$(document.getElementsByClassName("<%= dom_id(current_user)%>_<%= dom_id(@follow_request.recipient) %>_follow_request"))
+  .replaceWith("<%= j(render "follow_requests/follow_unfollow", recipient: @follow_request.recipient) %>");
