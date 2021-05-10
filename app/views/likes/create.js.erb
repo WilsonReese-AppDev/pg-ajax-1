@@ -1,3 +1,3 @@
 $(console.log("hello"));
 
-$("#<%= dom_id(@like.photo)%>_likes").replaceWith("hello");
+$("#<%= dom_id(@like.photo)%>_likes").replaceWith("<%= j(render("photos/like", photo: @like.photo)) %>");
