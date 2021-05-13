@@ -1,0 +1,9 @@
+const updatedComment = $("<%= j(render(@comment)) %>");
+updatedComment.hide();
+
+$("#<%= dom_id(@comment.photo) %>_<%= dom_id(@comment) %>_form").replaceWith(updatedComment);
+
+updatedComment.slideDown(250);
+
+
+// .replaceWith("<%= escape_javascript(render("comments/form", comment: @comment))
